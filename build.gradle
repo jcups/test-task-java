@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'ru.jcups.task.App'
+
+run {
+    standardInput(System.in)
+}
+
+group 'ru.jcups.test-task-java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.glassfish.jersey.inject:jersey-hk2:3.0.4'
+    implementation 'org.glassfish.jersey.core:jersey-client:3.0.4'
+    implementation 'org.glassfish.jersey.media:jersey-media-multipart:3.0.4'
+    implementation 'org.glassfish.jersey.media:jersey-media-json-jackson:3.0.4'
+
+    implementation 'io.github.openfeign:feign-core:11.8'
+    implementation 'io.github.openfeign:feign-jackson:11.8'
+    implementation 'io.github.openfeign.form:feign-form:3.8.0'
+
+    implementation 'commons-codec:commons-codec:1.15'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+}

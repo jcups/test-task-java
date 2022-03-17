@@ -1,0 +1,1 @@
+gradle clean&gradle build&gradle run --args="1"&pause
